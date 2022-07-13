@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+:root {
+  --buttonColor: hsl(223, 87%, 63%);
+  --activeButtonColor: hsl(223, 100%, 88%);
+  --errorMessageColor: hsl(354, 100%, 66%);
+  --mainMessageColor: hsl(0, 0%, 59%);
+  --blackColor: hsl(209, 33%, 12%);
+  --buttonHoverColor: hsl(223, 87%, 70%);
+}
+* {
+  font-family: "Libre Franklin", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.notification-container {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: hsl(209, 33%, 12%);
+  max-width: 700px;
+}
+.notification-container h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+.notification-container h1 span:nth-child(1) {
+  color: var(--mainMessageColor);
+}
+.notification-container h1 span:nth-child(2) {
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.notification-container p {
+  margin-top: 0;
+  padding-top: 0;
+  color: var(--mainMessageColor);
+  font-weight: 600;
+  font-size: smaller;
+}
+.form-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  max-width: 700px;
+}
+.form-container input {
+  border: 1px solid var(--activeButtonColor);
+  border-radius: 50px;
+  width: 350px;
+  padding: 20px;
+}
+.form-container input::placeholder {
+  color: var(--activeButtonColor);
+}
+.form-container input:focus {
+  outline: none;
+}
+.form-container button {
+  background-color: var(--buttonColor);
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 50px;
+  width: 200px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.3);
+  position: relative;
+  transition: top 1s;
+}
+.form-container button:hover {
+  background-color: var(--buttonHoverColor);
+  cursor: pointer;
+  top: -2px;
+}
+.dashboard-container {
+  width: 600px;
+}
+.dashboard-container img {
+  margin-top: 60px;
+  width: inherit;
+}
+@media (max-width: 650px) {
+  .dashboard-container {
+    width: 100%;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  .form-container {
+    padding: 0 50px 0 50px;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .form-container input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .form-container button {
+    width: 100%;
+  }
+  .notification-container h1 {
+    font-size: 1.5rem;
+  }
+  .email-container {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+.social-container {
+  color: var(--buttonColor);
+}
+.social-container ion-icon {
+  padding: 10px;
+  margin-right: 15px;
+  border: 1px solid var(--activeButtonColor);
+  border-radius: 50%;
+}
+.error {
+  border: 1px solid var(--errorMessageColor) !important;
+}
+.email-container {
+  position: relative;
+}
+.error-message {
+  color: red !important;
+  font-size: 14px;
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  left: 20px;
+}
+.valid {
+  display: block;
+}
